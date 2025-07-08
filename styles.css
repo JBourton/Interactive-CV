@@ -1,0 +1,96 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Styling for navigation bar section */
+.nav-link {
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #4f46e5;
+}
+
+/* Timeline styling */
+.timeline-item-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 1.5rem;
+}
+.timeline-item-content.open {
+    max-height: 500px;
+    padding: 1rem 1.5rem;
+}
+.skill-button.active {
+    background-color: #4f46e5;
+    color: white;
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    max-height: 400px;
+}
+@media (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+}
+
+/* Section to add glimmer effect to my name */
+.shine-effect {
+    background: linear-gradient(to right, #4f46e5 20%, #a5b4fc 40%, #a5b4fc 60%, #4f46e5 80%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: -200% center;
+    }
+}
+
+/* Section to add lines between job experiences */
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background-color: #e2e8f0;
+}
+
+.timeline-item-content {
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0; 
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, margin 0.4s ease-in-out;
+}
+
+.timeline-item-content.open {
+    max-height: 500px; 
+    /* Values correspond to Tailwind's p-6 and mt-4 */
+    padding-top: 1.5rem;  
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+}

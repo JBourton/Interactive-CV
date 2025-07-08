@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Bourton | Interactive CV</title>
+    <!-- Chosen Palette: Cool Slate (Light neutral background #f8fafc, muted indigo accent, dark slate text) -->
+    <!-- Application Structure Plan: A single-page portfolio with a top navigation bar. The structure includes: a Hero section, an interactive vertical Experience Timeline, a Skills Dashboard with a Chart.js visualization, a card-based Projects Showcase, and a clean Education section. This structure was chosen to transform the static CV into an engaging narrative of skills and experience, encouraging user interaction over passive reading. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-800">Joshua Bourton</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#experience" class="nav-link text-slate-600 font-medium">Experience</a>
+                <a href="#skills" class="nav-link text-slate-600 font-medium">Skills</a>
+                <a href="#projects" class="nav-link text-slate-600 font-medium">Projects</a>
+                <a href="#education" class="nav-link text-slate-600 font-medium">Education</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#experience" class="block py-2 nav-link text-slate-600 font-medium">Experience</a>
+             <a href="#skills" class="block py-2 nav-link text-slate-600 font-medium">Skills</a>
+             <a href="#projects" class="block py-2 nav-link text-slate-600 font-medium">Projects</a>
+             <a href="#education" class="block py-2 nav-link text-slate-600 font-medium">Education</a>
+             <a href="#contact" class="block mt-2 bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors text-center">Contact</a>
+        </div>
+    </header>
+
+    <!--"Professional Summary" equivilant-->
+    <main class="container mx-auto px-6">
+
+        <!--Summary Section-->
+        <section id="hero" class="text-center py-20 md:py-32">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-4">Hi, I'm <span class="text-indigo-600 shine-effect">Joshua Bourton</span>.</h1>            <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-600">A final-year Computer Science student at Durham University with a unique blend of hands-on engineering and technical project management experience from an enterprise year at P&G. Proven ability to own the full project lifecycle, from designing cloud architecture (Azure) and data pipelines (Databricks) to implementing secure, automated CI/CD workflows. Seeking to apply a holistic understanding of software development, cloud infrastructure, and project leadership to a challenging graduate role.</p>
+            <div id="contact" class="mt-8 flex justify-center items-center space-x-4">
+                <a href="mailto:joshua.bourton16@gmail.com" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg">Get In Touch</a>
+                <a href="https://github.com/joshbourton" target="_blank" class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/joshua-bourton-5991a0249" target="_blank" class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Professional Experience</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">My path to technology is built on two foundations: a deep understanding of engineering and a genuine passion for people.
+
+                    My intensive year-long internship at P&G provided me with a robust technical skill set in cloud engineering and project management within a leading corporate environment.
+                    
+                    <br><br>But it's my experience outside of the traditional tech path that brings a unique perspective. 
+                    Teaching a class in Vietnam taught me to break down complex ideas for any audience. 
+                    Years of online tutoring honed my ability to mentor and guide. 
+                    And my time in retail developed a first-hand understanding of user needs and problem-solving under pressure.
+                    
+                    <br><br>Together, these experiences have shaped me into a developer who can not only build the product right, but also ensure we're building the right product.
+                    
+                    <br><br><b>Click on each role below to see the details.</b>
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+
+                    <!-- P&G Item -->
+                    <div class="timeline-item">
+                        <div class="relative flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-indigo-600 shadow-md flex items-center justify-center ring-8 ring-white">
+                                <img src="icons/P&G Logo.png" alt="P&G Logo" class="rounded-full">
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-xl font-bold text-slate-800">Technical Project Manager (Intern)</h3>
+                            <p class="text-md font-medium text-indigo-600"><a href="https://www.pg.co.uk/">Procter & Gamble (P&G)</a></p>
+                            <p class="text-sm text-slate-500">July 2024 – June 2025 | Newcastle upon Tyne, UK</p>
+                            <button class="timeline-toggle text-sm text-indigo-500 mt-2 hover:underline">Show Details ▼</button>
+                        </div>
+                        <div class="timeline-item-content">
+                            <div class="bg-white rounded-lg shadow-sm mt-4 p-6">
+                                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                    <li>Spearheaded the recovery of a critical project facing a tight 4-month deadline by re-scoping deliverables and coordinating team efforts, ensuring a successful and on-time launch.</li>
+                                    <li>Served as the designated <b>Product Owner and Manager</b>, owning the project vision from ideation to delivery, defining technical requirements, and managing all communications between development, operations, and R&D teams.</li>
+                                    <li>Designed and implemented a complete CI/CD pipeline using <b>GitHub Actions, Docker, and Azure App Service</b>, automating the build and deployment process to improve developer efficiency.</li>
+                                    <li>Architected and implemented an automated vulnerability scanning process within the CI/CD pipeline, proactively identifying threats before deployment and <b>eliminating the need for manual security reviews</b>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tutorchase Item -->
+                    <div class="timeline-item">
+                        <div class="relative flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center ring-8 ring-white">
+                                <img src="icons/Tutorchase Logo.png" alt="Tutorchase Logo" class="rounded-full">
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-xl font-bold text-slate-800">Private Tutor, Maths & Computer Science</h3>
+                            <p class="text-md font-medium text-indigo-600"><a href="https://www.tutorchase.com/">Tutorchase</a></p>
+                            <p class="text-sm text-slate-500">Dec 2021 – June 2025 | Remote</p>
+                            <button class="timeline-toggle text-sm text-indigo-500 mt-2 hover:underline">Show Details ▼</button>
+                        </div>
+                        <div class="timeline-item-content">
+                            <div class="bg-white rounded-lg shadow-sm mt-4 p-6">
+                                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                    <li>Implemented personalised learning strategies for 15+ students from 13+ to IB level, reinforcing core computer science and mathematical principles.</li>
+                                    <li>Achieved and maintained an <strong>87% client retention rate</strong> through effective instruction and positive feedback.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--GoToCo item-->
+                    <div class="timeline-item">
+                        <div class="relative flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-indigo-600 shadow-md flex items-center justify-center ring-8 ring-white">
+                                <img src="icons/GoToCo Logo.png" alt="GoToCo Logo" class="rounded-full">
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-xl font-bold text-slate-800">TESOL-qualified English Teacher (Internship)</h3>
+                            <p class="text-md font-medium text-indigo-600"><a href="https://www.go-to.co/">GoToCo</a></p>
+                            <p class="text-sm text-slate-500">April 2023 – September 2023 | Ho Chi Minh City, Vietnam</p>
+                            <button class="timeline-toggle text-sm text-indigo-500 mt-2 hover:underline">Show Details ▼</button>
+                        </div>
+                        <div class="timeline-item-content">
+                            <div class="bg-white rounded-lg shadow-sm mt-4 p-6">
+                                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                    <li>Designed and executed a tailored curriculum aimed at boosting confidence in young people whilst improving language skills.</li>
+                                    <li>Devised creative methods to captivate children’s interest, fostering a joyful, secure, and encouraging learning environment.</li>
+                                    <li>Acquired and honed essential skills for efficiently organising and overseeing groups.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Nisa item-->
+                    <div class="timeline-item">
+                        <div class="relative flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white-600 shadow-md flex items-center justify-center ring-8 ring-white">
+                                <img src="icons/Nisa Logo.png" alt="Nisa Logo" class="rounded-full">
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-xl font-bold text-slate-800">Retail Assistant</h3>
+                            <p class="text-md font-medium text-indigo-600"><a href="https://www.nisalocally.co.uk/">Nisa Retail</a></p>
+                            <p class="text-sm text-slate-500">Feb 2020 – Apr 2023 | Wimborne, England, United Kingdom</p>
+                            <button class="timeline-toggle text-sm text-indigo-500 mt-2 hover:underline">Show Details ▼</button>
+                        </div>
+                        <div class="timeline-item-content">
+                            <div class="bg-white rounded-lg shadow-sm mt-4 p-6">
+                                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                    <li>Fostering collaborative teamwork amongst colleagues as a shift supervisor.</li>
+                                    <li>Resolving customer issues courteously and sensitively.</li>
+                                    <li>Keeping the store clean and presentable for trading.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Skill Cloud Details -->
+        <div class="container mx-auto p-4 md:p-8">
+            <section id="skill-cloud" class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Categorised Skill Board</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
+                        A structured look at my technical and professional abilities. Click any skill to learn more about my experience with it.
+                    </p>
+                </div>
+                <div id="skill-cloud-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+            </section>
+        </div>
+
+        <div id="skill-modal" class="fixed inset-0 bg-black bg-opacity-60 modal-backdrop flex justify-center items-center p-4 hidden z-50">
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg modal-content transform scale-95">
+                <div class="p-6 border-b border-slate-200 flex justify-between items-center">
+                    <h3 id="modal-title" class="text-2xl font-bold text-slate-800"></h3>
+                    <button id="close-modal" class="text-slate-500 hover:text-slate-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p id="modal-description" class="text-slate-600 mb-4"></p>
+                    <h4 class="font-bold text-slate-700 mb-2">Category:</h4>
+                    <p id="modal-category" class="text-slate-600"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <section id="skill-cloud" class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Categorized Skill Cloud</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
+                    A structured look at my technical and professional abilities. Click any skill to learn more about my experience with it.
+                </p>
+            </div>
+            <div id="skill-cloud-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+        </section> -->
+
+        <!-- Projects & Leadership Section -->
+        <section id="projects" class="py-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Projects & Leadership</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Beyond my professional work, I actively pursue opportunities that challenge me technically and allow me to contribute to meaningful causes.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Technical Competitions</h3>
+                    <p class="text-slate-600">Regular participant in Hackathons and competitor in CyberStart (Cybersecurity) and Project Euler (algorithmic puzzles), continuously honing my problem-solving and rapid development skills.</p>
+                </div>
+                 <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Arete Fellowship</h3>
+                    <p class="text-slate-600">Selected for a competitive fellowship in Effective Altruism, where I explored methods of leveraging technology for maximum societal benefit and ethical impact.</p>
+                </div>
+                 <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Global Interests & Volunteering</h3>
+                    <p class="text-slate-600">Volunteered to manage IT/AV systems for a local youth club. Gained resilience and cultural curiosity through 9 months of solo backpacking across South America & Asia. Currently studying Spanish (targeting B2).</p>
+                </div>
+            </div>
+        </section>
+        
+        <!--Education section-->
+        <section id="education" class="py-20 bg-slate-800 text-white rounded-xl shadow-lg">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold">Education</h2>
+            </div>
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl font-bold">Durham University</h3>
+                <p class="text-lg text-indigo-300 mt-1">BSc (Hons) Computer Science with Industrial Placement</p>
+                <p class="text-slate-300 mt-2">Expected Graduation: June 2026</p>
+                <div class="mt-6 border-t border-slate-600 pt-6 space-y-2">
+                    <p><span class="font-semibold">Academic Standing:</span> On track for a First-Class Honours (70% average).</p>
+                    <p><span class="font-semibold">Key Modules:</span> Design of Algorithms, Bias & Ethics in AI, Distributed Systems.</p>
+                </div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto text-center mt-8">
+                <button id="toggle-education-button" class="bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                    Show Previous Education ▼
+                </button>
+            
+                <div id="previous-education" class="hidden mt-6 text-center space-y-6 border-t border-slate-600 pt-6">
+                    <div>
+                        <h4 class="text-xl font-bold">Poole Grammar School</h4>
+                        <p class="text-indigo-300">A-Levels (2019 - 2021)</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 inline-block text-left">
+                            <li>Computer Science (A*)</li>
+                            <li>Maths (A*)</li>
+                            <li>Further Maths (A)</li>
+                            <li>Physics (B)</li>
+                        </ul>
+                    </div>
+                
+                    <div class="border-t border-slate-600 pt-6">
+                        <h4 class="text-xl font-bold">Queen Elizabeth’s School</h4>
+                        <p class="text-indigo-300">GCSEs (2016 - 2019)</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 inline-block text-left">
+                            <li>10 grade 9s, including Maths and English Language</li>
+                            <li>A* Level 2 Certificate in Further Mathematics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 py-10 bg-white">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <p>&copy; 2025 Joshua Bourton. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed to be an interactive representation of my professional journey.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
