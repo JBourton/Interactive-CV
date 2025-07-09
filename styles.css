@@ -68,3 +68,20 @@ body {
 #skill-cloud-container button {
   text-align: left;
 }
+
+/* Styling to differentiate download cv button */
+#download-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem; /* 8px top/bottom, 16px left/right */
+    background-color: #4f46e5; /* indigo-600 */
+    color: white;
+    font-weight: 600; /* semibold */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.2s ease-in-out;
+}
+
+#download-cv-btn:hover {
+    background-color: #4338ca; /* indigo-700 */
+    text-decoration: none;
+}

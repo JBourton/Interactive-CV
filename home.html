@@ -29,26 +29,45 @@
     <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <p href="#" class="text-xl font-bold text-slate-800">Interactive CV</p>
-            <!-- <a href="#" class="text-xl font-bold text-slate-800">Interactive CV</a> -->
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#experience" class="nav-link text-slate-600 font-medium">Experience</a>
                 <a href="#skills" class="nav-link text-slate-600 font-medium">Skills</a>
                 <a href="#projects" class="nav-link text-slate-600 font-medium">Projects</a>
                 <a href="#education" class="nav-link text-slate-600 font-medium">Education</a>
-                <a href="Docs/Joshua Bourton CV.pdf" download class="nav-link text-slate-600 font-medium">Download CV</a>
+                
+                <!-- Updated Download Button -->
+                <a href="Docs/Joshua Bourton CV.pdf" download class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>Download CV</span>
+                </a>
+                
                 <a href="mailto:joshua.bourton16@gmail.com" class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">Contact</a>
             </div>
+    
             <button id="mobile-menu-button" class="md:hidden" name="Hamburger Navigation Menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-2">
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-4">
             <a href="#experience" class="nav-link text-slate-600 font-medium">Experience</a>
             <a href="#skills" class="nav-link text-slate-600 font-medium">Skills</a>
             <a href="#projects" class="nav-link text-slate-600 font-medium">Projects</a>
             <a href="#education" class="nav-link text-slate-600 font-medium">Education</a>
-            <a href="Docs/Joshua Bourton CV.pdf" download class="nav-link text-slate-600 font-medium">Download CV</a>
-            <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg ...">Contact</a>
+            
+            <!-- Group the two buttons together for better layout -->
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <!-- Updated Mobile Download Button -->
+                <a href="Docs/Joshua Bourton CV.pdf" download class="flex-1 inline-flex items-center justify-center bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>Download CV</span>
+                </a>
+                <!-- Updated Mobile Contact Button -->
+                <a href="mailto:joshua.bourton16@gmail.com" class="flex-1 text-center bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">Contact</a>
+            </div>
         </div>
     </header>
 
@@ -63,7 +82,7 @@
                 <a href="https://github.com/jbourton" 
                     target="_blank" 
                     class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors" 
-                    aria-label="Visit my GitHub profile">
+                    aria-label="Visit my GitHub profile">   
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                 </a>
