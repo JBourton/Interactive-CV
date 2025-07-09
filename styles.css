@@ -13,36 +13,6 @@ body {
     color: #4f46e5;
 }
 
-/* Timeline styling */
-.timeline-item-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-    padding: 0 1.5rem;
-}
-.timeline-item-content.open {
-    max-height: 500px;
-    padding: 1rem 1.5rem;
-}
-.skill-button.active {
-    background-color: #4f46e5;
-    color: white;
-}
-.chart-container {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300px;
-    max-height: 400px;
-}
-@media (min-width: 768px) {
-    .chart-container {
-        height: 400px;
-    }
-}
-
 /* Section to add glimmer effect to my name */
 .shine-effect {
     background: linear-gradient(to right, #4f46e5 20%, #a5b4fc 40%, #a5b4fc 60%, #4f46e5 80%);
@@ -88,9 +58,13 @@ body {
 }
 
 .timeline-item-content.open {
-    max-height: 500px; 
-    /* Values correspond to Tailwind's p-6 and mt-4 */
-    padding-top: 1.5rem;  
+    max-height: 1500px; 
+    padding-top: 0.25rem;  
     padding-bottom: 1.5rem;
     margin-top: 1rem;
+}
+
+/* Styling for skill board */
+#skill-cloud-container button {
+  text-align: left;
 }
