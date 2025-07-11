@@ -87,16 +87,16 @@ body {
 }
 
 
-/* Flip style animation for hobbies */ 
+/* Flip style animation for hobbies */
 
 /* The main container for the card, with 3D perspective */
 .flip-card {
     background-color: transparent;
     width: 100%;
     height: 350px;
-    perspective: 1000px; 
+    perspective: 1000px;
     cursor: pointer;
-    position: relative;
+    position: relative; /* This is the added line */
 }
 
 /* This container holds both the front and back sides and does the actual flipping */
@@ -107,8 +107,8 @@ body {
     text-align: center;
     transition: transform 0.7s;
     transform-style: preserve-3d;
-    border-radius: 0.75rem; 
-    border: 1px solid #e2e8f0; 
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
 }
 
 /* The class that gets toggled by JavaScript to flip the card */
@@ -116,10 +116,11 @@ body {
     transform: rotateY(180deg);
 }
 
-
 /* Positioning for the front and back sides */
 .flip-card-front, .flip-card-back {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; 
@@ -140,9 +141,9 @@ body {
 /* Styling for the back of the card */
 .flip-card-back {
     background-color: white;
-    color: #1e293b; 
+    color: #1e293b;
     transform: rotateY(180deg);
-    padding: 1.5rem; 
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
