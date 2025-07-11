@@ -183,3 +183,26 @@ if (modal) {
 }
 
 populateSkillCloud();
+
+
+// JavaScript to handle the card flipping
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.flip-card');
+
+    cards.forEach(card => {
+        const inner = card.querySelector('.flip-card-inner');
+
+        const toggleFlip = () => {
+            inner.classList.toggle('is-flipped');
+        };
+
+        card.addEventListener('click', toggleFlip);
+
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                toggleFlip();
+            }
+        });
+    });
+});
+
