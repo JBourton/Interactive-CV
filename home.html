@@ -271,7 +271,7 @@
             </div>
         </section>
         
-        <!--Education section-->
+        <!-- Education Section -->
         <section id="education" class="py-20 bg-slate-800 text-white rounded-xl shadow-lg">
             <div class="text-center mb-8">
                 <h2 class="text-3xl md:text-4xl font-bold">Education</h2>
@@ -286,12 +286,11 @@
                     <p><span class="font-semibold">Key Modules:</span> Design of Algorithms, Bias & Ethics in AI, Distributed Systems.</p>
                 </div>
             </div>
-
+        
             <div class="max-w-2xl mx-auto text-center mt-8 px-4">
                 <button id="toggle-education-button" class="bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                     Show Previous Education ▼
                 </button>
-                
                 <div id="previous-education" class="hidden mt-6 text-center space-y-6 border-t border-slate-600 pt-6">
                     <div>
                         <h4 class="text-xl font-bold">Poole Grammar School</h4>
@@ -302,6 +301,7 @@
                             <li>Further Maths (A)</li>
                             <li>Physics (B)</li>
                         </ul>
+                        <p class="text-xs text-slate-400 mt-3 italic">Certificates available upon request.</p>
                     </div>
                     
                     <div class="border-t border-slate-600 pt-6">
@@ -311,8 +311,73 @@
                             <li>10 grade 9s, including Maths and English Language</li>
                             <li>A* Level 2 Certificate in Further Mathematics</li>
                         </ul>
+                        <div class="mt-3 space-y-2">
+                            <p class="text-xs text-slate-400 italic">Certificates available upon request.</p>
+                            <a href="https://www.bournemouthecho.co.uk/news/17853503.gcse-results-day-2019-live-coverage-schools-across-dorset-new-forest/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-indigo-400 hover:text-indigo-300 font-medium transition-colors text-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <span>View News Feature</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about-me" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Beyond the Code</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">When I'm not focused on technology, I'm passionate about exploring the world and pushing my own boundaries. Click on a card to learn more.</p>
+            </div>
+            
+            <!-- Grid container for the cards -->
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: Skydiving -->
+                <div class="flip-card" tabindex="0" aria-label="Flip card to learn about my skydiving hobby">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front relative">
+                            <img src="Docs/Media/skydiving.jpg" alt="An image of me skydiving over Peterlee" class="absolute h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                            <h3 class="relative text-3xl font-extrabold tracking-tight">Skydiving</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-xl font-bold text-indigo-600 mb-2">Skydiving</h4>
+                            <p class="text-slate-600 text-sm">Closing in on my 100th skydive, with jumps over, Stonehenge, the bustling skyline of Madrid and the beautifal British North East coast. Skydiving has become a way for me to quite literally explore the world from a different perspective.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Scuba Diving -->
+                <div class="flip-card" tabindex="0" aria-label="Flip card to learn about my scuba diving hobby">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front relative">
+                            <img src="Docs/Media/scuba diving.jpg" alt="An image of me scuba diving in Athens" class="absolute h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                            <h3 class="relative text-3xl font-extrabold tracking-tight">Scuba Diving</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-xl font-bold text-indigo-600 mb-2">Scuba Diving</h4>
+                            <p class="text-slate-600 text-sm">As a PADI Advanced certified diver, I love exploring the world beneath the waves. I've been fortunate enough to dive in the waters of 6 different countries, discovering vibrant marine ecosystems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Travelling -->
+                <div class="flip-card" tabindex="0" aria-label="Flip card to learn about my travelling hobby">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front relative">
+                            <img src="Docs/Media/colombia.jpg" alt="An image of me on the back of a truck in the Colombian mountains" class="absolute h-full w-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                            <h3 class="relative text-3xl font-extrabold tracking-tight">Solo Backpacking</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="text-xl font-bold text-indigo-600 mb-2">Solo Backpacking</h4>
+                            <p class="text-slate-600 text-sm">Spent a cumulative year independently travelling across South America and Asia, visiting 37 countries to date. This experience has strengthened my resilience, adaptability, and cultural awareness, gained through navigating unfamiliar environments and diverse conditions – from the vibrant energy of Colombia to the tranquillity of rural Laos.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
