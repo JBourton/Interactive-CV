@@ -63,11 +63,32 @@ const skillsData = {
          color: '#4ade80', // green-400
          description: "Transforming raw data into actionable insights through visualisation, analysis, and robust data management.",
          skills: {
-            "Microsoft Power BI": { description: "String expertise in creating compelling and interactive dashboards and reports with Power BI to drive business decisions." },
+            "Microsoft Power BI": { description: "Strong expertise in creating compelling and interactive dashboards and reports with Power BI to visualise complex data relationships and drive business decisions." },
             "Pandas": { description: "Utilised Pandas to build and analyse mathematical models, specifically for simulating the performance and output of a factory machines to identify points of optimisation." },
             "Microsoft Data Factory": { description: "Used to scope and extract valuable data from a large-scale corporate data lake. Performed data transformation and processing using SQL to prepare datasets for impactful visualisation in Power BI and web-based dashboards, enabling data-driven decision-making across the business." },
             "SQL Optimisation": { description: "Improved performance of legacy SQL queries by identifying and eliminating redundant data access patterns. Optimised query structure to significantly reduce execution time and enhance overall data retrieval efficiency across business-critical systems." },
          }
+    },
+    "Strategy & Systems Design": {
+        color: '#2dd4bf', // teal-400
+        description: "Bridging the gap between technical implementation and business objectives by designing robust, scalable systems that deliver measurable value.",
+        skills: {
+            "Business Impact Analysis": { 
+                description: "Successfully championed the strategic shift from a limited Power BI dashboard to a scalable web application. I articulated the business case for this fundamental change, focusing on enhanced user experience, long-term value, and scalability to secure stakeholder buy-in." 
+            },
+            "Scalability & Performance Planning": { 
+                description: "As the end-to-end design lead, I architected the application for future growth from day one. By collaborating closely with the Solutions Architect and embedding scalability into my Application Environment and Technical Infrastructure Diagrams, I ensured the system was built not just for current needs, but for future expansion." 
+            },
+            "Technical Roadmapping": { 
+                description: "Under intense time constraints on a high-stakes project, I authored the project's Critical Path Schedule (CPS). This involved negotiating and aligning with key stakeholders to define and lock in core deliverables, ensuring the project remained on track for a successful, on-time launch." 
+            },
+            "Cross-Functional Leadership": { 
+                description: "Acted as the primary liaison between the business and development teams. I led the end-user requirement gathering with R&D customers, translating their needs into precise technical specifications and championing a design that solved their core problems, ensuring we built the right product for them from the get-go." 
+            },
+            "Risk Assessment & Mitigation": { 
+                description: "Drove the entire risk assessment process for a new production application. I authored the formal Risk Assessment Management Plan (RAMP) and managed the iRisk documentation from start to finish, taking full ownership of identifying and mitigating potential technical and project-related risks." 
+            }
+        }
     },
     "Product & Project Management": {
         color: '#a78bfa', // violet-400
