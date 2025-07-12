@@ -15,14 +15,12 @@ body {
 
 /* Section to add glimmer effect to my name */
 .shine-effect {
-    background: linear-gradient(to right, #4f46e5 20%, #a5b4fc 40%, #a5b4fc 60%, #4f46e5 80%);
+    background: linear-gradient(to right, #4f46e5, #a855f7, #4f46e5);
     background-size: 200% auto;
-    
     color: #000;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
     animation: shine 5s linear infinite;
 }
 
