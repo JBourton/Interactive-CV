@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
     <!-- Chosen Palette: Cool Slate (Light neutral background #f8fafc, muted indigo accent, dark slate text) -->
-    <!-- Application Structure Plan: A single-page portfolio with a top navigation bar. The structure includes: a Hero section, an interactive vertical Experience Timeline, a Skills Dashboard with a Chart.js visualization, a card-based Projects Showcase, and a clean Education section. This structure was chosen to transform the static CV into an engaging narrative of skills and experience, encouraging user interaction over passive reading. -->
+    <!-- Application Structure Plan: A single-page portfolio with a top navigation bar. The structure includes: a Hero section, an interactive vertical Experience Timeline, a Skills Board, a card-based Projects Showcase, a clean Education section and an interactive "About Me" section. This structure was chosen to transform the static CV into an engaging narrative of skills and experience, encouraging user interaction over passive reading. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,25 +82,56 @@
     <!--"Professional Summary" equivilant-->
     <main class="container mx-auto px-6">
 
-        <!--Summary Section-->
-        <section id="hero" class="text-center py-20 md:py-32">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-4">Hi, I'm <span class="text-indigo-600 shine-effect">Joshua Bourton</span>.</h1>            <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-600">A final-year Computer Science student at Durham University with a unique blend of hands-on engineering and technical project management experience from an enterprise year at P&G. Proven ability to own the full project lifecycle, from designing cloud architecture (Azure) and data pipelines (Databricks) to implementing secure, automated CI/CD workflows. Seeking to apply a holistic understanding of software development, cloud infrastructure, and project leadership to a challenging graduate role.</p>
-            <div id="contact" class="mt-8 flex justify-center items-center space-x-4">
-                <a href="mailto:joshua.bourton16@gmail.com" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg">Get In Touch</a>
-                <a href="https://github.com/jbourton" 
-                    target="_blank" 
-                    class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors" 
-                    aria-label="Visit my GitHub profile">   
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/joshuabourton" 
-                    target="_blank" 
-                    class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors" 
-                    aria-label="Connect with me on LinkedIn">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                </a>
+        <section id="hero" class="container mx-auto px-6 py-20 md:py-32">
+            <!-- Grid container for the two-column layout -->
+            <!-- The gap on large screens has been reduced from lg:gap-16 to lg:gap-8 -->
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-8 items-center">
+    
+                <!-- Left Column: Text Content (takes up 3 of 5 columns on large screens) -->
+                <div class="lg:col-span-3 text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-4">
+                        Hi, I'm <span class="text-indigo-600 shine-effect">Joshua Bourton</span>.
+                    </h1>
+                    <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-slate-600">
+                        A final-year Computer Science student at Durham University with a unique blend of hands-on engineering and technical project management experience from an enterprise year at P&G. Proven ability to own the full project lifecycle, from designing cloud architecture (Azure) and data pipelines (Databricks) to implementing secure, automated CI/CD workflows. Seeking to apply a holistic understanding of software development, cloud infrastructure, and project leadership to a challenging graduate role.
+                    </p>
+                    <!-- Contact & Social Links -->
+                    <div id="contact" class="mt-8 flex justify-center lg:justify-start items-center space-x-4">
+                        <a href="mailto:joshua.bourton16@gmail.com" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg">Get In Touch</a>
+                        <a href="https://github.com/jbourton" target="_blank" class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors" aria-label="Visit my GitHub profile">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/joshuabourton" target="_blank" class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors" aria-label="Connect with me on LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 flex justify-center lg:justify-end items-center mt-16 lg:mt-0">
+                    <!-- Polaroid container for bio photo -->
+                    <div class="relative w-full max-w-[280px] lg:max-w-xs">
+                        <div class="bg-white p-4 pb-16 rounded-lg shadow-2xl transform rotate-3">
+                            <img src="Docs/Media/Profile Photo.JPG" 
+                                 alt="A bio photo of me in Edinburgh" 
+                                 class="w-full h-auto object-cover">
+                        </div>
+                             
+                        <!-- Red pin for photo -->
+                        <div class="absolute top-0 left-1/2 -ml-3 -mt-3 w-6 h-6 z-20">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient id="pinGradient" cx="0.3" cy="0.3" r="0.7">
+                                        <stop offset="0%" stop-color="#FF6B6B"/>
+                                        <stop offset="100%" stop-color="#C44D58"/>
+                                    </radialGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="45" fill="url(#pinGradient)" stroke="#A63C46" stroke-width="2"/>
+                                <path d="M50 95 L50 115" stroke="#B0B0B0" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
         </section>
 
@@ -119,7 +150,7 @@
                     
                     <br><br>Together, these experiences have shaped me into a developer who can not only build the product right, but also ensure we're building the right product.
                     
-                    <br><br><b>Click "Show Details" each role below to see more information.</b>
+                    <br><br><b>Click "Show Details" on each role below to see more information.</b>
                 </p>
             </div>
 
@@ -322,8 +353,7 @@
                         </ul>
                         <div class="mt-3 space-y-2">
                             <p class="text-xs text-slate-400 italic">Certificates available upon request.</p>
-                            <a href="https://www.bournemouthecho.co.uk/news/17853503.gcse-results-day-2019-live-coverage-schools-across-dorset-new-forest/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-indigo-400 hover:text-indigo-300 font-medium transition-colors text-sm">
-                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="https://www.bournemouthecho.co.uk/news/17853503.gcse-results-day-2019-live-coverage-schools-across-dorset-new-forest/#:~:text=Joshua%20Bourton" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-indigo-400 hover:text-indigo-300 font-medium transition-colors text-sm">                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                 <span>View News Feature</span>
                             </a>
                         </div>
@@ -336,7 +366,7 @@
         <section id="about-me" class="py-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Beyond the Code</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">When I'm not focused on technology, I'm passionate about exploring the world and pushing my own boundaries. Click on a card to learn more.</p>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">When I'm not focused on technology, I'm passionate about exploring the world and pushing my own boundaries. <b>Click on each card below to learn more.</b></p>
             </div>
             
             <!-- Grid container for the cards -->
@@ -352,7 +382,7 @@
                         </div>
                         <div class="flip-card-back">
                             <h4 class="text-xl font-bold text-indigo-600 mb-2">Skydiving</h4>
-                            <p class="text-slate-600 text-sm">Closing in on my 100th skydive, with jumps over, Stonehenge, the bustling skyline of Madrid and the beautiful British North East coast. Skydiving has become a way for me to quite literally explore the world from a different perspective.</p>
+                            <p class="text-slate-600 text-sm">Closing in on my 100th skydive, with jumps over Stonehenge, the bustling skyline of Madrid and the beautiful British North East coast. Skydiving has become a way for me to quite literally explore the world from a different perspective.</p>
                         </div>
                     </div>
                 </div>
@@ -382,7 +412,7 @@
                         </div>
                         <div class="flip-card-back">
                             <h4 class="text-xl font-bold text-indigo-600 mb-2">Solo Backpacking</h4>
-                            <p class="text-slate-600 text-sm">Spent a cumulative year independently travelling across South America and Asia, visiting 37 countries to date. This experience has strengthened my resilience, adaptability, and cultural awareness, gained through navigating unfamiliar environments and diverse conditions – from the vibrant energy of Colombia to the tranquillity of rural Laos.</p>
+                            <p class="text-slate-600 text-sm">Spent a cumulative year independently travelling across South America and Asia, visiting 37 countries to date. This experience has strengthened my resilience, adaptability, and cultural awareness, gained through navigating unfamiliar environments and diverse conditions – from the vibrant energy of coastal Colombia to the tranquillity of rural Laos.</p>
                         </div>
                     </div>
                 </div>
