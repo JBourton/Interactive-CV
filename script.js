@@ -32,7 +32,7 @@ toggleButton.addEventListener('click', () => {
 
 
 // ===================================================================
-// DATA: Skills Definition
+// DATA: Here's where the skills that appear on the the board are set
 // ===================================================================
 const skillsData = {
     "Cloud & DevOps": {
@@ -94,7 +94,7 @@ const skillsData = {
 };
 
 // ===================================================================
-// SCRIPT: Skill Cloud
+// SCRIPT: Here's the script to generate the skill board
 // ===================================================================
 const skillCloudContainer = document.getElementById('skill-cloud-container');
 const modal = document.getElementById('skill-modal');
@@ -185,7 +185,7 @@ if (modal) {
 populateSkillCloud();
 
 
-// JavaScript to handle the card flipping
+// This JS handles card flipping
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.flip-card');
 
