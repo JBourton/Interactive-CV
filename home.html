@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An interactive version of my (Joshua Bourton) CV, designed to be an easy way to learn more about my professional career.">
     <title>Joshua Bourton | Interactive CV</title>
-    <!-- Favicon and App Icon Links -->
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -29,7 +29,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
+    <!-- Site navigation section -->
     <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <p href="#" class="text-xl font-bold text-slate-800">Interactive CV</p>
@@ -42,7 +42,7 @@
                 <a href="#education" class="nav-link text-slate-600 font-medium">Education</a>
                 <a href="#about-me" class="nav-link text-slate-600 font-medium">About Me</a>
                 
-                <!-- Updated Download Button -->
+                <!-- Download button -->
                 <a href="Docs/Joshua Bourton CV.pdf" download class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                     <span>Download CV</span>
@@ -63,15 +63,13 @@
             <a href="#projects" class="nav-link text-slate-600 font-medium">Projects</a>
             <a href="#education" class="nav-link text-slate-600 font-medium">Education</a>
             <a href="#about-me" class="nav-link text-slate-600 font-medium">About Me</a>
-            
-            <!-- Group the two buttons together for better layout -->
             <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                <!-- Updated Mobile Download Button -->
+                <!-- CV download -->
                 <a href="Docs/Joshua Bourton CV.pdf" download class="flex-1 inline-flex items-center justify-center bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                     <span>Download CV</span>
                 </a>
-                <!-- Updated Mobile Contact Button -->
+                <!-- Email redirect link -->
                 <a href="mailto:joshua.bourton16@gmail.com" class="flex-1 text-center bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">Contact</a>
             </div>
         </div>
@@ -80,11 +78,11 @@
     <!--"Professional Summary" equivilant-->
     <main class="container mx-auto px-6">
 
-        <section id="hero" class="container mx-auto px-6 py-20 md:py-32">
+        <section id="hero" class="container mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-32">
             <!-- Grid container for two-column layout -->
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-8 items-center">
     
-                <!-- Left Column: Text Content (takes up 3 of 5 columns on large screens) -->
+                <!-- Left Column: bio about me (3/5 of lrg screen) -->
                 <div class="lg:col-span-3 text-center lg:text-left">
                     <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-4">
                         Hi, I'm <span class="text-indigo-600 shine-effect">Joshua Bourton</span>.
@@ -92,7 +90,7 @@
                     <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-slate-600">
                         A final-year Computer Science student at Durham University with a unique blend of hands-on engineering and technical project management experience from an enterprise year at P&G. Proven ability to own the full project lifecycle, from designing cloud architecture (Azure) and data pipelines (Databricks) to implementing secure, automated CI/CD workflows. Seeking to apply a holistic understanding of software development, cloud infrastructure, and project leadership to a challenging graduate role.
                     </p>
-                    <!-- Contact & Social Links -->
+                    <!-- Contact & socials -->
                     <div id="contact" class="mt-8 flex justify-center lg:justify-start items-center space-x-4">
                         <a href="mailto:joshua.bourton16@gmail.com" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg">Get In Touch</a>
                         <a href="https://github.com/jbourton" target="_blank" class="text-slate-600 p-3 rounded-full hover:bg-slate-200 transition-colors" aria-label="Visit my GitHub profile">
@@ -105,7 +103,7 @@
                 </div>
 
                 <div class="lg:col-span-2 flex justify-center lg:justify-end items-center mt-16 lg:mt-0">
-                    <!-- Polaroid container for bio photo -->
+                    <!-- Polaroid design for my bio photo -->
                     <div class="relative w-full max-w-[280px] lg:max-w-xs">
                         <div class="bg-white p-4 pb-16 rounded-lg shadow-2xl transform rotate-3">
                             <img src="Docs/Media/Profile Photo.JPG" 
@@ -113,7 +111,7 @@
                                  class="w-full h-auto object-cover">
                         </div>
                              
-                        <!-- Red pin for photo -->
+                        <!-- + red pin -->
                         <div class="absolute top-0 left-1/2 -ml-3 -mt-3 w-6 h-6 z-20">
                             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
@@ -152,10 +150,10 @@
             </div>
 
             <div class="max-w-3xl mx-auto">
-                <!-- Timeline Items -->
+                <!-- Timeline items for work experience -->
                 <div class="space-y-12">
 
-                    <!-- P&G Item -->
+                    <!-- P&G -->
                     <div class="timeline-item">
                         <div class="relative flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-indigo-600 shadow-md flex items-center justify-center ring-8 ring-white">
@@ -180,7 +178,7 @@
                         </div>
                     </div>
 
-                    <!-- Tutorchase Item -->
+                    <!-- Tutorchase -->
                     <div class="timeline-item">
                         <div class="relative flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center ring-8 ring-white">
@@ -203,7 +201,7 @@
                         </div>
                     </div>
 
-                    <!--GoToCo item-->
+                    <!--GoToCo -->
                     <div class="timeline-item">
                         <div class="relative flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-indigo-600 shadow-md flex items-center justify-center ring-8 ring-white">
@@ -227,7 +225,7 @@
                         </div>
                     </div>
 
-                    <!--Nisa item-->
+                    <!--Nisa -->
                     <div class="timeline-item">
                         <div class="relative flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-white-600 shadow-md flex items-center justify-center ring-8 ring-white">
@@ -256,8 +254,8 @@
             </div>
         </section>
 
-        <!-- Modal for Skill Board Details -->
-        <div class="container mx-auto p-4 md:p-8">
+        <!-- Modal design for clicking on individual skills -->
+        <div id="skills" class="container mx-auto p-4 md:p-8">
             <section id="skill-cloud" class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Categorised Skill Board</h2>
@@ -366,7 +364,7 @@
                 <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">When I'm not focused on technology, I'm passionate about exploring the world and pushing my own boundaries. <b>Click on each card below to learn more.</b></p>
             </div>
             
-            <!-- Grid container for the cards -->
+            <!-- Container to hold hobby cards -->
             <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Card 1: Skydiving -->
